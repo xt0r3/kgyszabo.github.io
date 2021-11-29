@@ -1,0 +1,63 @@
+.container{
+    background-color: #171717;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: max(1000px, 100vh);
+    display: flex;
+}
+
+.content{
+    margin-left: 6.5%;
+    width: 93.5%;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: max(1000px, 100vh);
+    z-index: 1;
+    transition: 0.5s ease;
+    width: 6.25%;
+}
+
+.sidebar-header{
+    background-color: #d0d0d0;
+    display: flex;
+    flex-display: rows;
+}
+
+.sidebar-content{
+    background-color: #171717;
+}
+
+.toggle:hover{
+    background-color: #FFFFFF;
+}
+
+.toggle{
+    width: auto;
+    margin: 0px;
+    background-color: #d0d0d0;
+}
+
+.sidebar.active .toggle{
+
+}
+
+.bx bx-menu{
+    color: #FFFFFF;
+}
+
+.bx bx-menu:hover{
+    color: #f6c91e;
+}
+
+.sidebar.active{
+    transition: 0.5s ease;
+    width: 29.16%;
+}
+
+body{
+    margin: 0;
+}

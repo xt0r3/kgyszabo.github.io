@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orienta&display=swap');
+
+$icon-size: 24px;
+$sidebar-width: 300px;
+$sidebar-margin-around: 10px;
+$sidebar-padding-around: 5px;
+$sidebar-active-hover-color: #000;
+
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+/*
+main frame that contains the contents
+ */
+.container {
+    display: grid;
+    grid-template-columns: ($icon-size + 2 * ($sidebar-margin-around + $sidebar-padding-around)) 1fr;
+    align-items: stretch;
+    height: 100%;
+}
+
+/*
+container for the contents of the website
+ */
+.main {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #171717;
+}
+
+/*
+Section header settings
+ */
+.section-header{
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.section-name{
+    color: #f6c91e;
+    font-family: 'Orienta';
+    font-weight: lighter;
+}
+
+/*
+main container for the welcome section
+ */
+.welcome {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/welcome-background-processed.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*
+block container for the welcome sectoin
+ */
+.welcome-container {
+    overflow-x: visible;
+    background-color: #FFFFFF;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    color: #000;
+    position: relative;
+}
+
+.welcome-avatar {
+    position: absolute;
+    border-radius: 10px;
+    width: max(100px, 12vw);
+    height: auto;
+    left: 50%;
+    top: -10vw;
+    transform: translateX(-50%);
+}
+
+/*
+text for the welcome header
+ */
+.welcome-content{
+    padding-top: calc(max(12vw, 100px) - 10vw + 32px);
+    padding-right: 32px;
+    padding-left: 32px;
+    text-align: justify;
+    font-style: italic;
+    line-height: 168%;
+    font-size: 16px;
+}
+
+/*
+Text for header
+ */
+.welcome-intro-header{
+    position: absolute;
+    top: -40px;
+    left: calc(max(50% + max(100px, 12vw) / 2) + 16px);
+    width: 100%;
+}
+
+.projects {
+    display:flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+main container for the sidebar
+ */
+.sidebar {
+    z-index: 100;
+    height: 100%;
+
+    position: relative;
+    overflow-x: visible;
+    $sidebar-color: #171717;
+    background-color: $sidebar-color;
+}
+
+/*
+dashboard and menu
+ */
+.sidebar.active .sidebar-content {
+    right: -($sidebar-width - $icon-size - 2 * ($sidebar-margin-around + $sidebar-padding-around));
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    position: absolute;
+    right: 0;
+    background-color: #171717;
+    color: #FFFFFF;
+    width: $sidebar-width;
+    height: 100%;
+}
+
+.sidebar-header {
+    height: $icon-size + 2 * ($sidebar-margin-around + $sidebar-padding-around);
+    background-color: #333333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.toggle-sidebar{
+    padding: ($sidebar-margin-around + $sidebar-padding-around);
+}
+
+.sidebar-header-code{
+    padding-left: 10px;
+}
+
+.toggle-sidebar:hover {
+    color: #f6c91e;
+}
+
+.dashboard {
+    font-size: 24px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.bx {
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.text {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/*
+dashboard contents
+ */
+
+.sidebar-item{
+    padding-right: $sidebar-padding-around;
+    border-radius: 20px;
+    margin-left: $sidebar-margin-around;
+    margin-right: $sidebar-margin-around;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-icon:hover {
+    color: #f6c91e;
+}
+
+.sidebar.active .sidebar-item:hover {
+    background-color: #f6c91e;
+    color: $sidebar-active-hover-color;
+}

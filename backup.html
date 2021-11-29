@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="main.scss" rel="stylesheet"/>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="projects">
+        <div class="container" id="mainframe">
+            <div class="sidebar" style="background-color: #ffffff">
+                <div class = "sidebar-header">
+                    <div class = "toggle" onclick=
+                            "let sidebar = document.querySelector('.sidebar');
+                                    sidebar.classList.toggle('active')"
+                    >
+                        <i class='bx bx-menu' style="font-size: 3rem;"></i>
+                    </div>
+                </div>
+                <div class = "sidebar-content">
+                    hali
+                </div>
+            </div>
+            <div class="content" onclick=
+                    "let sidebar = document.querySelector('.sidebar');
+                         if(sidebar.classList.contains('active')){
+                             sidebar.classList.toggle('active');
+                         }"
+            >
+                <div style = "background-color: #787878;">
+                    I'm the second column
+                    </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
