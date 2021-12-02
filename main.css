@@ -269,12 +269,8 @@ dashboard contents
   align-items: center;
 }
 
-.sidebar-icon:hover {
+.sidebar:not(.active) .sidebar-icon:hover {
   color: #f6c91e;
-}
-
-.sidebar.active .sidebar-icon:hover {
-  color: #000;
 }
 
 .sidebar.active .sidebar-item:hover {
