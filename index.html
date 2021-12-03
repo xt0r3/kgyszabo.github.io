@@ -59,7 +59,7 @@
         <!-- Welcome text -->
         <div class="welcome">
             <div class="welcome-container">
-                <img class = "welcome-avatar" src="./images/avatar.jpg" alt="Image not found"/>
+                <img class = "welcome-avatar" src="data/images/avatar.jpg" alt="Image not found"/>
                 <div class="section-header welcome-intro-header">
                     <span>I'm </span><span class="section-name">Kornél Szabó</span>
                 </div>
@@ -71,21 +71,23 @@
                 </div>
             </div>
         </div>
+
+
         <!-- My projects -->
         <div class="projects">
             <!-- Background video -->
-                <video class="play-when-visible scroll-fade background-video" muted loop >
-                    <source src="./data/videos/projects-background-video.mp4" type="video/mp4">
-                </video>
-                 <!-- Main frame for content -->
-                <div class="projects-content">
-                    <!-- Title -->
-                    <div></div>
-                    <div class="project-title title">
-                        <div class="section-header"><span>My </span><span class="section-name">Projects</span></div>
-                        <div class="text" style="color: #fff">Projects that I have<br>already completed</div>
-                    </div>
-                    <div></div>
+            <video class="play-when-visible scroll-fade background-video" muted loop >
+                <source src="./data/videos/projects-background-video.mp4" type="video/mp4">
+            </video>
+
+
+            <!-- Title -->
+            <div class= "title">
+                <div class="section-header"><span>My </span><span class="section-name">Projects</span></div>
+                <div class="text" style="color: #fff">Projects that I have<br>already completed</div>
+            </div>
+            <!-- Main frame for content -->
+            <div class="projects-content">
                     <!-- Project blocks -->
                     <!-- Evolution -->
                     <div class="project-block" id="evolution-block" onclick="window.open('https://github.com');">
@@ -115,6 +117,54 @@
                     </div>
                     <script src="./data/scripts/initBlock.js"></script>
                 </div>
+        </div>
+
+        <!-- My awards -->
+        <div class="awards">
+            <div class="title row-block">
+                <div class="section-header"><span>My </span><span class="section-name">Awards</span></div>
+                <div class="text" style="color: #fff">Awards and competition results</div>
+            </div>
+            <!-- Achievement title and blocks -->
+
+            <!-- Web design -->
+            <div class="award-title">Web design</div>
+            <div class="award-block">
+                <div class="text" style="text-align: left">Morgan Stanley CodeToGive - 1st place</div>
+                <div class="text" style="color:#747474;">06/17/2021</div>
+                <div class="text" style="color:#747474;">international</div>
+            </div>
+            <!-- Artificial Intelligence -->
+            <div class="award-title">Artificial Intelligence</div>
+            <div class="award-block">
+                <div class="text" style="text-align: left">IOI CodeCombat - 1st place</div>
+                <div class="text" style="color:#747474;">06/17/2021</div>
+                <div class="text" style="color:#747474;">international</div>
+            </div>
+            <!-- Competitive programming -->
+            <div class="award-title">Competitive programming</div>
+            <div class="award-block">
+                <div class="text" style="text-align: left">International Olympiad in Informatics - bronze medal</div>
+                <div class="text" style="color:#747474;">06/17/2021</div>
+                <div class="text" style="color:#747474;">international</div>
+            </div>
+            <div class="award-block">
+                <div class="text" style="text-align: left">Central-European Olympiad in Informatics - bronze medal</div>
+                <div class="text" style="color:#747474;">06/17/2021</div>
+                <div class="text" style="color:#747474;">international</div>
+            </div>
+            <!-- Mathematics -->
+            <div class="award-title">Mathematics</div>
+            <div class="award-block">
+                <div class="text" style="text-align: left">International Mathematical Olympiad - bronze medal</div>
+                <div class="text" style="color:#747474;">06/17/2021</div>
+                <div class="text" style="color:#747474;">international</div>
+            </div>
+            <div class="award-block">
+                <div class="text" style="text-align: left">Middle-European Mathematical Olympiad - silver medal</div>
+                <div class="text" style="color:#747474;">06/17/2021</div>
+                <div class="text" style="color:#747474;">international</div>
+            </div>
         </div>
     </div>
 </div>

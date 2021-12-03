@@ -5,6 +5,7 @@ $icon-size: 24px;
 $sidebar-width: 300px;
 $sidebar-margin-around: 10px;
 $sidebar-padding-around: 5px;
+$sidebar-closed-width: $icon-size + 2 * ($sidebar-margin-around + $sidebar-padding-around);
 $sidebar-active-hover-color: #000;
 
 body {
@@ -54,9 +55,14 @@ Section header settings
 }
 
 .title{
+    z-index: 1;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    height: auto;
 }
 
 /*
@@ -72,15 +78,61 @@ Background video class
 
 /*
 -----------------------------------------------------------------------------------------------------------------------
+                AWARDS
+ */
+
+.awards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("data/images/awards-background-processed.jpg");
+    background-size: cover;
+    row-gap: 10px;
+}
+
+.award-block{
+    margin-left: calc(10% - #{$sidebar-closed-width});
+    margin-right: 10%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80%;
+    height: 6%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 5fr 1fr 1fr;
+}
+
+.award-title{
+    margin-left: calc(10% - #{$sidebar-closed-width});
+    font-size: 20px;
+    margin-right: 10%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80%;
+    height: 6%;
+    color: #FFFFFF;
+    display: flex;
+    align-items: end;
+
+    font-weight: bold;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------------
                 PROJECTS
  */
 
 .projects {
     display: flex;
+    flex-direction: column;
     place-items: center;
     position: relative;
     width: 100%;
     height: 100%;
+    overflow-y: hidden;
 }
 
 .projects-content {
@@ -91,11 +143,12 @@ Background video class
     margin-left: 10%;
     margin-right: 10%;
     height: 100%;
-    width: 100%;
+    width: 80%;
 }
 
 .project-block{
     overflow-x: hidden;
+    overflow-y: hidden;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -121,10 +174,6 @@ Background video class
     opacity: 0.3;
 }
 
-.project-title{
-
-}
-
 /*
 -----------------------------------------------------------------------------------------------------------------------
                 WELCOME
@@ -141,7 +190,7 @@ main container for the welcome section
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url("./images/welcome-background-processed.jpg");
+    background-image: url("data/images/welcome-background-processed.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
