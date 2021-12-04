@@ -55,7 +55,7 @@
     <script>
         function resetSidebar() {
             let sidebar = document.querySelector(".sidebar");
-            if(sidebar.classList.contains("active")){
+            if (sidebar.classList.contains("active")) {
                 sidebar.classList.toggle("active");
             }
         }
@@ -64,15 +64,20 @@
         <!-- Welcome text -->
         <div class="welcome" id="welcome">
             <div class="welcome-container">
-                <img class = "welcome-avatar" src="data/images/avatar.jpg" alt="Image not found"/>
+                <img alt="Image not found" class="welcome-avatar" src="data/images/avatar.jpg"/>
                 <div class="section-header welcome-intro-header">
                     <span>I'm </span><span class="section-name">Kornél Szabó</span>
                 </div>
                 <div class="welcome-content">
-                    <p>
-                        I’m Kornél Szabó, an X year old CS Student at Cambridge University. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <div class="text">
+                        I’m Kornél Szabó, an X year old CS Student at Cambridge University. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,55 +86,72 @@
         <!-- My projects -->
         <div class="projects" id="projects">
             <!-- Background video -->
-            <video class="play-when-visible scroll-fade background-video" muted loop >
+            <video class="play-when-visible scroll-fade background-video" loop muted>
                 <source src="./data/videos/projects-background-video-processed.mp4" type="video/mp4">
             </video>
 
 
             <!-- Title -->
-            <div class= "title scroll-fade">
+            <div class="title scroll-fade">
                 <div class="section-header"><span>My </span><span class="section-name">Projects</span></div>
-                <div class="text" style="color: #fff">Projects that I have<br>already completed</div>
+                <div class="section-subtitle" style="color: #fff">Projects that I have<br>already completed</div>
             </div>
             <!-- Main frame for content -->
             <div class="projects-content">
-                    <!-- Project blocks -->
-                    <!-- Evolution -->
-<!-- CSINALD MEG A-ra  a linkeket!!!!!! -->
-                    <div class="project-block scroll-fade" id="evolution-block" onclick="window.open('https://github.com');">
-                        <div class="section-header" style="color: #000">Evolutionary learning</div>
-                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis distinctio dolor laborum obcaecati sed voluptate? Animi, molestias, totam! Exercitationem facere fugiat illo nisi nobis quia quisquam quo repellat unde veniam. Accusamus alias aspernatur delectus dolore eaque facere fugiat impedit nihil, nostrum nulla omnis pariatur quis sapiente totam vel voluptate.</div>
-                        <video class="hover-video" id="evolution-video" muted loop>
-                             <source src="./data/videos/FlappyBird.mp4" type="video/mp4">
-                        </video>
+                <!-- Project blocks -->
+                <!-- Evolution -->
+                <!-- CSINALD MEG A-ra  a linkeket!!!!!! -->
+                <div class="project-block scroll-fade" id="evolution-block"
+                     onclick="window.open('https://github.com');">
+                    <h2 class="center" style="color: #000">Evolutionary learning</h2>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis
+                        distinctio dolor laborum obcaecati sed voluptate? Animi, molestias, totam! Exercitationem facere
+                        fugiat illo nisi nobis quia quisquam quo repellat unde veniam. Accusamus alias aspernatur
+                        delectus dolore eaque facere fugiat impedit nihil, nostrum nulla omnis pariatur quis sapiente
+                        totam vel voluptate.
                     </div>
-
-                    <!-- Neural net  -->
-                    <div class="project-block scroll-fade" id="neural-net-block" onclick="window.open('https://github.com');">
-                        <div class="section-header" style="color: #000">Neural net</div>
-                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis distinctio dolor laborum obcaecati sed voluptate? Animi, molestias, totam! Exercitationem facere fugiat illo nisi nobis quia quisquam quo repellat unde veniam. Accusamus alias aspernatur delectus dolore eaque facere fugiat impedit nihil, nostrum nulla omnis pariatur quis sapiente totam vel voluptate.</div>
-                        <video class="hover-video" id="neural-net-video" muted loop>
-                            <source src="./data/videos/FlappyBird.mp4" type="video/mp4">
-                        </video>
-                    </div>
-
-                    <!-- Repeat -->
-                    <div class="project-block scroll-fade" id="repeat-block" onclick="window.open('https://github.com');">
-                        <div class="section-header" style="color: #000">Repeat</div>
-                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis distinctio dolor laborum obcaecati sed voluptate? Animi, molestias, totam! Exercitationem facere fugiat illo nisi nobis quia quisquam quo repellat unde veniam. Accusamus alias aspernatur delectus dolore eaque facere fugiat impedit nihil, nostrum nulla omnis pariatur quis sapiente totam vel voluptate.</div>
-                        <video class="hover-video" id="repeat-video" muted loop>
-                            <source src="./data/videos/FlappyBird.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <script src="./data/scripts/initBlock.js"></script>
+                    <video class="hover-video" id="evolution-video" loop muted>
+                        <source src="./data/videos/FlappyBird.mp4" type="video/mp4">
+                    </video>
                 </div>
+
+                <!-- Neural net  -->
+                <div class="project-block scroll-fade" id="neural-net-block"
+                     onclick="window.open('https://github.com');">
+                    <h2 class="center" style="color: #000">Neural net</h2>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis
+                        distinctio dolor laborum obcaecati sed voluptate? Animi, molestias, totam! Exercitationem facere
+                        fugiat illo nisi nobis quia quisquam quo repellat unde veniam. Accusamus alias aspernatur
+                        delectus dolore eaque facere fugiat impedit nihil, nostrum nulla omnis pariatur quis sapiente
+                        totam vel voluptate.
+                    </div>
+                    <video class="hover-video" id="neural-net-video" loop muted>
+                        <source src="./data/videos/FlappyBird.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- Repeat -->
+                <div class="project-block scroll-fade" id="repeat-block" onclick="window.open('https://github.com');">
+                    <h2 class="center" style="color: #000">Repeat</h2>
+                    <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur corporis
+                        distinctio dolor laborum obcaecati sed voluptate? Animi, molestias, totam! Exercitationem facere
+                        fugiat illo nisi nobis quia quisquam quo repellat unde veniam. Accusamus alias aspernatur
+                        delectus dolore eaque facere fugiat impedit nihil, nostrum nulla omnis pariatur quis sapiente
+                        totam vel voluptate.
+                    </div>
+                    <video class="hover-video" id="repeat-video" loop muted>
+                        <source src="./data/videos/FlappyBird.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <script src="./data/scripts/initBlock.js"></script>
+            </div>
         </div>
 
         <!-- My awards -->
         <div class="awards" id="awards">
             <div class="title row-block scroll-fade">
                 <div class="section-header"><span>My </span><span class="section-name">Awards</span></div>
-                <div class="text" style="color: #fff">Awards and competition results</div>
+                <div class="section-subtitle" style="color: #fff">Awards and competition results</div>
             </div>
             <!-- Achievement title and blocks -->
 
@@ -176,14 +198,74 @@
         <div class="experience" id="experience">
             <div class="title row-block scroll-fade">
                 <div class="section-header"><span>My </span><span class="section-name">Experience</span></div>
-                <div class="text" style="color: #fff">Workplace experience</div>
+                <div class="section-subtitle" style="color: #fff;">Workplace experience</div>
             </div>
-            <div class="experience-content"><div class="experience-container"><div class="image" style="background-image: url('./data/images/avatar.jpg');"></div><div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut beatae deserunt dignissimos dolorem dolorum est eum facilis hic, ipsam minima nostrum quod soluta! Eos incidunt officia perferendis praesentium. At dolorem laboriosam mollitia perferendis, quasi veritatis? Beatae excepturi laudantium minus.</div> </div></div>
-            <div class="experience-content"><div class="experience-container"><div class="image" style="background-image: url('./data/images/avatar.jpg');"></div><div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut beatae deserunt dignissimos dolorem dolorum est eum facilis hic, ipsam minima nostrum quod soluta! Eos incidunt officia perferendis praesentium. At dolorem laboriosam mollitia perferendis, quasi veritatis? Beatae excepturi laudantium minus.</div> </div></div>
-            <div class="experience-content"><div class="experience-container"><div class="image" style="background-image: url('./data/images/avatar.jpg');"></div><div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deserunt eveniet exercitationem id in numquam, possimus suscipit totam. Animi asperiores, dolor harum impedit non sapiente! Accusamus adipisci aliquid animi blanditiis cumque debitis dicta dolorem eius expedita fugiat id illum impedit ipsa laboriosam laborum magnam maxime necessitatibus, neque nihil nulla obcaecati officiis pariatur perspiciatis porro quaerat quasi repellat repellendus rerum suscipit, unde. A assumenda ex nisi! Ab accusantium amet animi assumenda aut consequatur, distinctio dolorem, facilis ipsam magnam quasi qui sit sunt unde velit. Consequuntur corporis cumque dolorem labore laboriosam maiores neque repellat sed sit voluptatibus! Ab, accusantium adipisci aperiam asperiores corporis cumque cupiditate deserunt eaque eius harum libero nam nostrum, porro sapiente sequi similique, temporibus unde ut. Adipisci, dolor earum fuga itaque natus obcaecati odit reiciendis totam. Accusamus, accusantium alias animi aut autem corporis cum cumque doloremque doloribus eaque expedita id, itaque laboriosam nam neque nihil numquam obcaecati odio omnis porro possimus quam quas quis quo ratione rem repudiandae rerum sed sequi similique soluta sunt tempore totam? Consequatur corporis eos optio placeat qui sint! Ad, assumenda atque consequuntur corporis ea eveniet harum impedit natus nihil, numquam quas quidem temporibus veritatis voluptatem voluptatibus? Beatae iusto placeat quisquam quod quos repellat sapiente, sed sunt temporibus! Accusantium adipisci autem debitis deserunt distinctio, doloribus eius esse minus natus necessitatibus neque officia perferendis quae quas, quia reprehenderit suscipit. Aperiam beatae, deleniti error omnis quis totam? Aliquam consequuntur dignissimos, dolores illum in labore numquam obcaecati placeat quam qui quod sapiente soluta tenetur ullam voluptatum. Animi autem impedit magnam porro, quas reiciendis rem. Adipisci aliquid culpa dignissimos distinctio dolore dolorum eos, expedita in maxime nemo non odio, perspiciatis porro quia quisquam quo sapiente sequi unde vero vitae? Adipisci aliquam at autem corporis cupiditate dicta doloremque enim et, harum illo iure magnam mollitia nobis numquam optio placeat praesentium quam quasi quo ratione reiciendis sit voluptas voluptate. Accusantium consequatur exercitationem id iste maxime modi neque quae quod vel veritatis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut beatae deserunt dignissimos dolorem dolorum est eum facilis hic, ipsam minima nostrum quod soluta! Eos incidunt officia perferendis praesentium. At dolorem laboriosam mollitia perferendis, quasi veritatis? Beatae excepturi laudantium minus.</div> </div></div>
-            <div class="experience-content"><div class="experience-container"><div class="image" style="background-image: url('./data/images/avatar.jpg');"></div><div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut beatae deserunt dignissimos dolorem dolorum est eum facilis hic, ipsam minima nostrum quod soluta! Eos incidunt officia perferendis praesentium. At dolorem laboriosam mollitia perferendis, quasi veritatis? Beatae excepturi laudantium minus.</div> </div></div>
-            <div class="experience-content"><div class="experience-container"><div class="image" style="background-image: url('./data/images/avatar.jpg');"></div><div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut beatae deserunt dignissimos dolorem dolorum est eum facilis hic, ipsam minima nostrum quod soluta! Eos incidunt officia perferendis praesentium. At dolorem laboriosam mollitia perferendis, quasi veritatis? Beatae excepturi laudantium minus.</div> </div></div>
-            <div class="experience-content"><div class="experience-container"><div class="image" style="background-image: url('./data/images/avatar.jpg');"></div><div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque aut beatae deserunt dignissimos dolorem dolorum est eum facilis hic, ipsam minima nostrum quod soluta! Eos incidunt officia perferendis praesentium. At dolorem laboriosam mollitia perferendis, quasi veritatis? Beatae excepturi laudantium minus.</div> </div></div>
+            <div class="experience-content">
+                <div class="experience-container">
+                    <div class="image" style="background-image: url('./data/images/summer-intern.jpg');"></div>
+                    <div class="section narrow-margin">
+                        <h1>X Summer Intern</h1>
+                        <h2>Software Engineer</h2>
+                        <h3 class="line">July 2022 - September 2022</h3>
+                        <div style="text-align: justify">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dignissimos dolorum eum laboriosam molestiae natus odio odit quia quibusdam temporibus.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-content">
+                <div class="experience-container">
+                    <div class="image" style="background-image: url('./data/images/alphachallenge.jpg');"></div>
+                    <div class="section narrow-margin">
+                        <h1>Alphachallenge</h1>
+                        <h2>Front-end Developer and Communications Manager</h2>
+                        <h3 class="line">November 2021 - present</h3>
+                        <div style="text-align: justify">
+                            Alphachallenge is a free contest in informatics for students. It is organized by a group of volunteers whose aim is to spread the joy of programming to the youth.
+                            <br>
+                            My role as a Front-end Developer means that I work on the contest interface and the contest website, making sure that everything looks good and is going to work as intended during the contest.<br>
+                            As a Communications Manager, I am also responsible for making contact with companies, managing sponsors and attending business conferences where we meet new potential partners.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-content">
+                <div class="experience-container">
+                    <div class="image" style="background-image: url('./data/images/alphacademy.png');"></div>
+                    <div class="section narrow-margin">
+                        <h1>Alphacademy</h1>
+                        <h2>Senior Group Lead</h2>
+                        <h3 class="line">March 2021 - present</h3>
+                        <div style="text-align: justify">
+                            Alphacademy is a company that teaches programming to children aged between 8 and 18. We currently have more than 300 students and more than 30 teachers.
+                            <br>
+                            As a Senior Group Lead, I teach and motivate around 30 students and I am also responsible for the work of a group of teachers.
+                            <br>
+                            Being a Senior Group Lead also means that we get direct feedback from the director of the company which is a great opportunity for development in business and management.
+                            <br>
+                            I enjoy working here, because I get to make a positive impact on the world while also obtaining people and organization management skills.
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-content">
+                <div class="experience-container">
+                    <div class="image" style="background-image: url('./data/images/fazmun-processed.jpg');"></div>
+                    <div class="section narrow-margin">
+                        <h1>Fazekas Model United Nations Club</h1>
+                        <h2>President</h2>
+                        <h3 class="line">September 2017 - June 2021</h3>
+                        <div style="text-align: justify">
+                            As President of our MUN Club, it was my responsibility to make sure that everything ran smoothly in the Club.
+                            <br>
+                            I assembled a team, which helped me establish our rules, recruit members, organise weekly sessions and obtain funding and organise travel for international conferences.
+                            <br>
+                            This was my first opportunity to have true responsibility and make a real impact on my surroundings.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
