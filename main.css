@@ -59,6 +59,10 @@ Section header settings
   height: auto;
 }
 
+.no-padding-top {
+  padding-top: 0;
+}
+
 /*
 Background video class
  */
@@ -192,11 +196,15 @@ Background video class
  */
 .awards {
   width: 100%;
-  height: 100%;
+  height: calc(100% + 100px);
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  position: relative;
   display: flex;
   flex-direction: column;
   background-image: url("data/images/awards-background-processed.jpg");
   background-size: cover;
+  background-position: 0 0;
   row-gap: 10px;
 }
 
@@ -226,6 +234,19 @@ Background video class
   display: flex;
   align-items: end;
   font-weight: bold;
+}
+
+.awards::after {
+  z-index: 10;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 70%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: " ";
+  color: #fff;
+  height: 100px;
+  width: 100%;
 }
 
 /*
