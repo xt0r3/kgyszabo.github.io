@@ -330,6 +330,7 @@ dashboard contents
 
 .scroll-fade {
   opacity: 0;
+  transition: 1s ease;
 }
 
 /*# sourceMappingURL=main.css.map */

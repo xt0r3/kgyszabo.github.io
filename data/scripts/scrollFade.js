@@ -1,4 +1,8 @@
 const objs = document.getElementsByClassName('scroll-fade');
+const shown = [];
+for(let i = 0; i < objs.length; i++){
+    shown.push(false);
+}
 
 function clampV(x){
     if(x < 0) return 0;
@@ -13,28 +17,44 @@ function clampH(y){
 }
 
 function checkScrollFade() {
-    var fraction = 0.0; // Do when the object is visible
+    let fraction = 0.5; // Do when the object is visible
+    let delay = 0;
+    let count = 0;
+    let length = 500;
 
-    for(var i = 0; i < objs.length; i++) {
-        var obj = objs[i];
-        var coords = obj.getBoundingClientRect();
+    for(let i = 0; i < objs.length; i++) {
+        if(!shown[i]){
+            let obj = objs[i];
+            let coords = obj.getBoundingClientRect();
 
-        var visibleX = clampV(coords.right) - clampV(coords.left);
-        var visibleY = clampH(coords.bottom) - clampH(coords.top);
+            let visibleX = clampV(coords.right) - clampV(coords.left);
+            let visibleY = clampH(coords.bottom) - clampH(coords.top);
 
-        var visible = visibleX * visibleY / (coords.width * coords.height);
+            let visible = visibleX * visibleY / (coords.width * coords.height);
 
-        if (visible > fraction) {
-            console.log(obj.style.opacity);
-            let cur = 0;
-            if(!isNaN(parseFloat(obj.style.opacity))){
-                cur = parseFloat(obj.style.opacity);
+            if (visible > fraction) {
+                count++;
             }
-            obj.style.opacity = Math.max(cur, Math.min(visible * 0.3, 0.3)).toString();
         }
-
     }
 
+    length = Math.min(length, count * 100);
+
+    for(let i = 0; i < objs.length; i++) {
+        if(!shown[i]){
+            let obj = objs[i];
+            let coords = obj.getBoundingClientRect();
+
+            let visibleX = clampV(coords.right) - clampV(coords.left);
+            let visibleY = clampH(coords.bottom) - clampH(coords.top);
+
+            let visible = visibleX * visibleY / (coords.width * coords.height);
+
+            if (visible > fraction) {
+                setTimeout(function() {obj.style.opacity = '1'; shown[i] = true;}, delay += length / count);
+            }
+        }
+    }
 }
 
 window.addEventListener('scroll', checkScrollFade, true);
