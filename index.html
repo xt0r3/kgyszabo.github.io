@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <div class="sidebar">
-        <div class="sidebar-content">
+        <nav class="sidebar-content">
             <!-- Dashboard with icons -->
             <div class="sidebar-header">
                 <i class='bx bx-code icon sidebar-header-code'></i>
@@ -25,27 +25,32 @@
             </div>
             <div style="height: 20%"></div>
             <!-- Dashboard contents -->
-            <!-- Awards -->
-            <div class="sidebar-item">
-                <div class="text">Awards</div>
-                <i class='bx bxs-trophy sidebar-icon'></i>
-            </div>
+            <!-- Welcome -->
+            <a class="sidebar-item" href="#welcome">
+                <div class="text">Welcome</div>
+                <i class='bx bxs-home'></i>
+            </a>
             <!-- Projects -->
-            <div class="sidebar-item">
+            <a class="sidebar-item" href="#projects">
                 <div class="text">Projects</div>
                 <i class='bx bx-laptop sidebar-icon'></i>
-            </div>
+            </a>
+            <!-- Awards -->
+            <a class="sidebar-item" href="#awards">
+                <div class="text">Awards</div>
+                <i class='bx bxs-trophy sidebar-icon'></i>
+            </a>
             <!-- Experience -->
-            <div class="sidebar-item">
+            <a class="sidebar-item" href="#experience">
                 <div class="text">Experience</div>
                 <i class='bx bxs-book-open sidebar-icon'></i>
-            </div>
+            </a>
             <!-- Contact me -->
             <div class="sidebar-item">
                 <div class="text">Contact me</div>
                 <i class='bx bxs-contact sidebar-icon'></i>
             </div>
-        </div>
+        </nav>
     </div>
     <script>
         function resetSidebar() {
@@ -57,7 +62,7 @@
     </script>
     <div class="main" onclick="resetSidebar()">
         <!-- Welcome text -->
-        <div class="welcome">
+        <div class="welcome" id="welcome">
             <div class="welcome-container">
                 <img class = "welcome-avatar" src="data/images/avatar.jpg" alt="Image not found"/>
                 <div class="section-header welcome-intro-header">
@@ -74,7 +79,7 @@
 
 
         <!-- My projects -->
-        <div class="projects">
+        <div class="projects" id="projects">
             <!-- Background video -->
             <video class="play-when-visible scroll-fade background-video" muted loop >
                 <source src="./data/videos/projects-background-video-processed.mp4" type="video/mp4">
@@ -120,7 +125,7 @@
         </div>
 
         <!-- My awards -->
-        <div class="awards">
+        <div class="awards" id="awards">
             <div class="title row-block scroll-fade">
                 <div class="section-header"><span>My </span><span class="section-name">Awards</span></div>
                 <div class="text" style="color: #fff">Awards and competition results</div>
@@ -164,6 +169,13 @@
                 <div class="text" style="text-align: left">Middle-European Mathematical Olympiad - silver medal</div>
                 <div class="text" style="color:#747474;">06/17/2021</div>
                 <div class="text" style="color:#747474;">international</div>
+            </div>
+        </div>
+        <!-- My experience -->
+        <div class="experience" id="experience">
+            <div class="title row-block scroll-fade">
+                <div class="section-header"><span>My </span><span class="section-name">Experience</span></div>
+                <div class="text" style="color: #fff">Workplace experience</div>
             </div>
         </div>
     </div>

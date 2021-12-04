@@ -7,6 +7,7 @@ body {
 }
 
 html {
+  scroll-behavior: smooth;
   height: 100%;
   margin: 0;
 }
@@ -27,6 +28,7 @@ container for the contents of the website
 .main {
   overflow-x: hidden;
   overflow-y: scroll;
+  scroll-behavior: smooth;
   background-color: #171717;
 }
 
@@ -66,6 +68,15 @@ Background video class
   left: 0;
   width: 100%;
   height: auto;
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------
+                EXPERIENCE
+ */
+.experience {
+  width: 100%;
+  min-height: 100%;
 }
 
 /*
@@ -305,6 +316,11 @@ dashboard and menu
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /*
 dashboard contents
  */
@@ -330,7 +346,7 @@ dashboard contents
 
 .scroll-fade {
   opacity: 0;
-  transition: 1s ease;
+  transition: 1s ease-in;
 }
 
 /*# sourceMappingURL=main.css.map */
