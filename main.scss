@@ -120,9 +120,9 @@ Background video class
   z-index: 3;
   position: absolute;
   display: block;
-  top: -$awards-fade-end / 2;
+  top: -$awards-fade-end/2 - 100px;
   left: 0;
-  padding-top: 0;
+  padding-top: 100px;
   padding-bottom: 0;
 }
 
@@ -219,13 +219,13 @@ Background video class
  */
 
 .awards {
-  width: 100%;
-  height: calc(fit-content + #{$awards-fade-end}); //added height for the fade
-  min-height: calc(100% + #{$awards-fade-end});
-  padding-bottom: $awards-fade-end;
-  padding-left: calc(max(16px, 10% - #{$sidebar-closed-width}));
-  padding-right: calc(max(16px + #{$sidebar-closed-width}, 10%));
-  box-sizing: border-box;
+  height: fit-content;
+  min-height: 100%;
+  padding-bottom: $awards-fade-end; //added height for the fade
+  width: calc(100% - 2 * max(16px, 10%));//padding subtracted because of content-box sizing
+  padding-left: calc(max(16px, 10%));
+  padding-right: calc(max(16px, 10%));
+  box-sizing: content-box;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -249,12 +249,11 @@ Background video class
 }
 
 .award-title {
-  margin-left: calc(10% - #{$sidebar-closed-width});
   font-size: 20px;
-  margin-right: 10%;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 80%;
+  padding-left: calc(max(20px, 10%));
+  padding-right: calc(max(20px, 10%));
+  box-sizing: border-box;
+  width: 100%;
   height: 6%;
   color: #FFFFFF;
   display: flex;
