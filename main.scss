@@ -8,6 +8,7 @@ $sidebar-padding-around: 5px;
 $sidebar-closed-width: $icon-size + 2 * ($sidebar-margin-around + $sidebar-padding-around);
 $sidebar-active-hover-color: #000;
 $experience-before-height: 5vw;
+$awards-fade-end: 200px;
 
 body {
   font-family: 'Roboto';
@@ -68,10 +69,6 @@ Section header settings
   height: auto;
 }
 
-.no-padding-top{
-  padding-top: 0;
-}
-
 /*
 Background video class
  */
@@ -101,6 +98,11 @@ Background video class
   text-align: left;
 }
 
+.description{
+  text-align: justify;
+  line-height: 150%;
+}
+
 /*
 ------------------------------------------------------------------------------------------------------------------------
                 EXPERIENCE
@@ -110,7 +112,18 @@ Background video class
   background-color: #000;
   width: 100%;
   height: 100%;
+  position: relative;
   min-height: fit-content;
+}
+
+.experience-title{
+  z-index: 3;
+  position: absolute;
+  display: block;
+  top: -$awards-fade-end / 2;
+  left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .experience-content{
@@ -168,8 +181,8 @@ Background video class
 
 .experience-container{
   width: 100%;
-  height: 100%;
-  min-height: fit-content;
+  height: fit-content;
+  min-height: 100%;
   display: flex;
   padding-left: 32px;
   padding-right: 32px;
@@ -178,17 +191,15 @@ Background video class
 }
 
 .experience-container > *{
-  flex: 1 1 0;
 }
 
 .experience-container > .section{
-  flex: 4 4 0;
   max-width: 600px;
 }
 
 .image{
+  width: 20%;
   aspect-ratio: 1;
-  max-width: 20%;
   background-size: cover;
   background-position: center;
   border-radius: 10px;
@@ -209,8 +220,11 @@ Background video class
 
 .awards {
   width: 100%;
-  height: calc(100% + 100px); //100px for the fade
-  padding-bottom: 100px;
+  height: calc(fit-content + #{$awards-fade-end}); //added height for the fade
+  min-height: calc(100% + #{$awards-fade-end});
+  padding-bottom: $awards-fade-end;
+  padding-left: calc(max(16px, 10% - #{$sidebar-closed-width}));
+  padding-right: calc(max(16px + #{$sidebar-closed-width}, 10%));
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -222,11 +236,10 @@ Background video class
 }
 
 .award-block {
-  margin-left: calc(10% - #{$sidebar-closed-width});
-  margin-right: 10%;
   padding-left: 20px;
   padding-right: 20px;
-  width: 80%;
+  box-sizing: border-box;
+  width: 100%;
   height: 6%;
   background-color: #FFFFFF;
   border-radius: 10px;
@@ -251,7 +264,7 @@ Background video class
 }
 
 .awards::after{
-  z-index: 10;
+  z-index: 2;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 70%);
   position: absolute;
   bottom: 0;
@@ -259,7 +272,7 @@ Background video class
   display: block;
   content: " ";
   color: #fff;
-  height: 100px;
+  height: $awards-fade-end;
   width: 100%;
 }
 
@@ -272,10 +285,12 @@ Background video class
 .projects {
   display: flex;
   flex-direction: column;
+  padding: 32px;
   place-items: center;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  min-height: 100%;
   overflow-y: hidden;
 }
 
@@ -333,14 +348,15 @@ main container for the welcome section
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  min-height: 100%;
   background-image: url("data/images/welcome-background-processed.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 /*
-block container for the welcome sectoin
+block container for the welcome section
  */
 .welcome-container {
   overflow-x: visible;
