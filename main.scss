@@ -120,7 +120,7 @@ Background video class
   z-index: 3;
   position: absolute;
   display: block;
-  top: -$awards-fade-end/2 - 100px;
+  top: -(0.5 * $awards-fade-end) - 100px;
   left: 0;
   padding-top: 100px;
   padding-bottom: 0;
